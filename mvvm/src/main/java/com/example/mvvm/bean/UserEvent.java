@@ -14,7 +14,8 @@ public class UserEvent {
         mUser = user;
     }
 
-    public TextWatcher mWatcher = new TextWatcher() {
+
+    public TextWatcher userNameWatcher = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -28,6 +29,23 @@ public class UserEvent {
         @Override
         public void afterTextChanged(Editable s) {
             mUser.userName = s.toString();
+        }
+    };
+
+    public TextWatcher passWordWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+            mUser.passWord = s.toString();
         }
     };
 }

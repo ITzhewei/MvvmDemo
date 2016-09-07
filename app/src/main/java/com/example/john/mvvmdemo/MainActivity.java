@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         mUser = new User();
         //        mUser.userName.set("john");
         mUser.userName = "john";
+
+
         binding.setUser(mUser);
         binding.setEvent(new UserEvent(mUser));
 
